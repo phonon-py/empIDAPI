@@ -1,8 +1,9 @@
-from fastapi import FastAPI, Depends  # FastAPIフレームワークのインポート
+from fastapi import Depends, FastAPI  # FastAPIフレームワークのインポート
 from pydantic import BaseModel  # データ検証と設定のためのPydanticのインポート
-from sqlalchemy import create_engine, Column, Integer, String  # SQLAlchemyの主要機能のインポート
+from sqlalchemy import (Column, Integer, String,  # SQLAlchemyの主要機能のインポート
+                        create_engine)
 from sqlalchemy.ext.declarative import declarative_base  # ベースクラス作成のためのインポート
-from sqlalchemy.orm import sessionmaker, Session  # セッション管理のためのインポート
+from sqlalchemy.orm import Session, sessionmaker  # セッション管理のためのインポート
 
 app = FastAPI()  # FastAPIアプリケーションのインスタンスを作成
 
